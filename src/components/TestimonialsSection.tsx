@@ -83,9 +83,11 @@ export default function TestimonialsSection() {
               className={`testimonial-card ${testimonial.isLarge ? 'testimonial-large' : ''}`}
             >
               <h3 className="testimonial-title">{testimonial.title}</h3>
-              <div className="stars">
-                {renderStars(testimonial.stars)}
-              </div>
+              {testimonial.stars && (
+                <div className="stars">
+                  {renderStars(testimonial.stars)}
+                </div>
+              )}
               <p className="testimonial-text">{testimonial.text}</p>
               <p className="testimonial-author">{testimonial.author}</p>
             </div>
