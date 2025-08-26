@@ -3,49 +3,93 @@
 const services = [
   {
     id: 1,
-    title: "Electricians / Plumbers",
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=300&fit=crop"
+    title: "Elektriker / Rørlegger",
+    image: "/tjenester/elektriker.jpeg"
   },
   {
     id: 2,
-    title: "Facade and roof",
-    image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=400&h=300&fit=crop"
+    title: "Fasade og tak",
+    image: "/tjenester/tak.webp"
   },
   {
     id: 3,
-    title: "Painting and spackling",
-    image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=400&h=300&fit=crop"
+    title: "Maling og sparkling",
+    image: "/tjenester/maling.jpeg"
   },
   {
     id: 4,
-    title: "Wall and concrete",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop"
+    title: "Mur og betong",
+    image: "/tjenester/mur%20og%20betong.jpeg"
   },
   {
     id: 5,
-    title: "Carpenters",
-    image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=300&fit=crop"
+    title: "Snekker",
+    image: "/tjenester/snekker.jpeg"
   },
   {
     id: 6,
-    title: "Wet rooms",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop"
+    title: "Våtrom",
+    image: "/tjenester/våtrom.jpeg"
   }
 ]
 
 export default function ServicesGrid() {
   return (
-    <section style={{ backgroundColor: '#1a1a1a', minHeight: '100vh' }}>
-      <div className="services-grid">
+    <section style={{ backgroundColor: '#1a1a1a', minHeight: '100vh', padding: '40px' }}>
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+        gap: '20px',
+        maxWidth: '1400px',
+        margin: '0 auto',
+        minHeight: 'calc(100vh - 120px)'
+      }}>
         {services.map((service) => (
-          <div key={service.id} className="service-card">
-            <img 
-              src={service.image}
-              alt={service.title}
-              className="service-image"
-            />
-            <div className="service-overlay">
-              <h3 className="service-title">{service.title}</h3>
+          <div 
+            key={service.id} 
+            style={{
+              position: 'relative',
+              backgroundImage: `url(${service.image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              borderRadius: '8px',
+              overflow: 'hidden',
+              cursor: 'pointer',
+              transition: 'transform 0.3s ease',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minHeight: '300px'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'scale(1.02)'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1)'
+            }}
+          >
+            <div style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: 'rgba(0, 0, 0, 0.4)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}>
+              <h3 style={{
+                fontSize: '28px',
+                fontWeight: '300',
+                color: '#ffffff',
+                textAlign: 'center',
+                letterSpacing: '1px',
+                textTransform: 'capitalize',
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)'
+              }}>
+                {service.title}
+              </h3>
             </div>
           </div>
         ))}

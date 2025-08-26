@@ -30,6 +30,19 @@ const galleryImages = [
   }
 ]
 
+const bathroomImages = [
+  {
+    id: 1,
+    src: "/Bad-Marveien.jpg",
+    alt: "Bad Marveien - Bathroom renovation project"
+  },
+  {
+    id: 2,
+    src: "/oppbygging bad i eldre hus.jpg",
+    alt: "Oppbygging bad i eldre hus - Bathroom construction in older house"
+  }
+]
+
 export default function GallerySection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 

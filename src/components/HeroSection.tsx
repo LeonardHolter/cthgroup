@@ -17,7 +17,7 @@ export default function HeroSection() {
       <div className="hero-overlay"></div>
       <div className="hero-content">
         <div className="hero-description">
-          CTH-Group Construction AS has long experience and broad competence for your project. We have specialists, carpenters, tilers, painters, kitchen installers, and professional craftsmen. In addition, we have a close collaboration with plumbers and electricians. This means that we can complete projects on time and deliver documentation on completed work. We take care of an unproductive relationship. The goal is to satisfy our customers and provide the best service with competitive prices within the construction industry.
+          CTH-GROUP har lang erfaring og bred kompetanse for ditt oppdrag. Vi har snekkere, betongarbeidere, flisleggere, malere, kjøkkenmontører og vi er våtromsertifisert. I tillegg har vi forøvrig et tett samarbeid med rørlegger og elektriker. Dette gjør at vi kan gjennomføre oppdrag på bestemt tid, og levere dokumentasjon på utført arbeid. Vi tar gjerne en uforpliktende befaring. Målet er mest fornøyde kunder og beste service med konkurrerende priser innen byggebransjen.
         </div>
       </div>
       

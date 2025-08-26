@@ -21,8 +21,8 @@ export default function PartnersSection() {
       </div>
       
       <div className="partners-intro">
-        CTH-Group Construction AS carries out all its projects as main or total contractor. 
-        The company is approved as a wet room contractor, and centrally approved.
+        CTH-GROUP gjennomfører alle sine prosjekter som hoved- eller totalentreprenør. 
+        Bedriften er godkjent som våtromsbedrift, og sentralt godkjent.
       </div>
       
       <h2 className="section-title">OUR COLLABORATION PARTNERS</h2>
